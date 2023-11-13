@@ -78,7 +78,7 @@ edm4hep_t k4LCIOConverter::getCorresponding(const std::string &type, LCIO_t *rob
             return lcol->at(idx);
         }
     }
-    return nullptr;  //crash the application if the corresponding obj is not found
+    return edm4hep_t::makeEmpty();  //crash the application if the corresponding obj is not found
 }
 
 #endif
